@@ -148,7 +148,8 @@ Template.prototype.create = function(){
   console.log();
   this.files.forEach(function(file){
     var path = self.parse(file)
-      , out = join(dest, path.replace(self.contentPath, ''));
+      , out = join(dest, path.replace(self.contentPath, '')
+        .replace('gitignore', '.gitignore'));
 
     // directory
     if (self.directories[file]) {
