@@ -92,6 +92,7 @@ Template.prototype.init = function(dest){
 
     function done(value) {
       self.values[key] = String(value).trim();
+      self.values[key + 'UpperCase'] = self.values[key].toUpperCase();
       next();
     }
 

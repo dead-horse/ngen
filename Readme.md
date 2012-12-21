@@ -2,10 +2,10 @@
 # NGen
 
  NGen is a nodejs package generator, complete with best practices, package structure, package.json and more.
-
+ Customize for EDP. 
 ## Installation
 
-    $ npm install ngen
+    $ npm install ngen-edp
 
 ## Usage
 
@@ -24,23 +24,93 @@
 
 ### Default
 
- Currently the only available template, creating the following structure populated with content after the following questions are asked from the cli:
+ creating the following structure populated with content after the following questions are asked from the cli:  
 
-       Project name: foo
-       Enter your name: TJ Holowaychuk
-       Enter your email: tj@vision-media.ca
-       Project description: awesome foo-ness
+```
+Project name: foo
+Enter your name: TJ Holowaychuk
+Enter your email: tj@vision-media.ca
+Project description: awesome foo-ness
+```
+ structure:
 
-structure:
+``` 
+History.md
+Readme.md
+index.js
+support
+Makefile
+package.json
+lib/
+  |- <project>.js
+test/
+  |- <project>.test.js
+```
+
+### edplib  
+
+ creating the following structure populated with content after the following questions are asked from the cli:  
+
+```
+Project name: edplib
+Enter your name: 不四
+Enter your email: busi.hyy@taobao.com
+Project description: edplib gen by ngen-edp
+```
+ structure:
  
-     ./History.md
-     ./Readme.md
-     ./index.js
-     ./lib/<project>.js
-     ./test/<project>.test.js
-     ./support
-     ./Makefile
-     ./package.json
+``` 
+History.md
+Readme.md
+index.js
+Makefile
+package.json
+.gitignore
+lib/
+  |- <project>.js
+test/
+  |- -<project>.test.js
+  |- mocha.opts
+```
+### edpweb   
+
+ creating the following structure populated with content after the following questions are asked from the cli:  
+
+```
+Project name: edpweb
+Enter your name: 不四
+Enter your email: busi.hyy@taobao.com
+Project description: edpweb gen by ngen-edp
+```
+ structure:
+ 
+``` 
+History.md
+Readme.md
+app.js
+dispatch.js
+Makefile
+package.json
+.gitignore
+config/
+  |- index.js
+  |- config_daily.js
+  |- config_pre.js
+  |- config_production.js
+controllers/
+common/
+lib/
+proxy/
+public/
+views/
+test/
+  |- controllers/
+  |- common/
+  |- proxy/
+  |- lib/
+  |- mocha.opts
+  |- app.test.js
+```
 
 ## License 
 
