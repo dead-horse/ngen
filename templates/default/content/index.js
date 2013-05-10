@@ -1,2 +1,12 @@
+/*!
+ * {{project}} - lib/{{project}}.js 
+ * Copyright(c) {{copyrightyear}} {{name}} <{{email}}>
+ */
 
-module.exports = require('./lib/{{project}}');
+
+/**
+ * Module dependencies.
+ */
+
+
+module.exports = process.env.{{projectUpperCase}}_COV ? require('./lib-cov/{{project}}') : require('./lib/{{project}}');

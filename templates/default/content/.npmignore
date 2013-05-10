@@ -1,4 +1,9 @@
-support
-test
-examples
-*.sock
+*.swp
+nohup.out
+*.log
+.DS_Store
+coverage.html
+lib-cov/
+.lock-wscript
+build/
+test/
