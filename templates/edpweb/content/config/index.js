@@ -9,10 +9,18 @@
 /**
  * Module dependencies.
  */
+
+var fs = require('fs');
 var path = require('path');
 
 var config = {
+  debug: true,
+  logdir: path.join(path.dirname(__dirname), '.logs'),
+  logStdErr: true,
+  port: 7001,
+  enableCluster: false,
 
+  sessionSecret: '{{project}} sessionSecret need to be change',
 };
 
 var customConfig = path.join(__dirname, 'config.js');

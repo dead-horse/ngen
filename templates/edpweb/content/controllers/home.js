@@ -1,5 +1,5 @@
 /*!
- * {{project}} - test/{{project}}.test.js 
+ * {{project}} - controllers/home.js 
  * Copyright(c) {{copyrightyear}} Alibaba Group Holding Limited.
  * Author: {{name}} <{{email}}>
  */
@@ -10,4 +10,8 @@
  * Module dependencies.
  */
 
-var varname = require('modulename');
+module.exports = function (req, res, next) {
+  res.render('/index', {
+    now: new Date()
+  });
+};
