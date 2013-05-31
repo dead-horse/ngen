@@ -2,14 +2,42 @@
   "name": "{{project}}",
   "version": "0.0.1",
   "description": "{{description}}",
-  "keywords": [],
+  "keywords": ["{{project}}"],
   "author": "{{name}} <{{email}}>",
   "repository": { "type": "git", "url": "git://gitlab.alibaba-inc.com/{{project}}.git" },
-  "dependencies": {},
+  "dependencies": {
+    "connect": "2.7.1",
+    "graceful": "0.0.5",
+    "connect-render": "0.2.0",
+    "connect-rt": "0.0.1",
+    "urlrouter": "0.2.3",
+    "response-patch": "0.0.3",
+    "response-cookie": "0.0.1",
+    "eventproxy": "0.2.2",
+    "taobaostatus": "0.1.1",
+    "ali-logger": "0.0.7",
+    "ms": "0.6.1",
+    "loader": "0.0.2",
+    "hsf": "0.7.23-0.8"
+  },
   "devDependencies": {
     "mocha": "*",
     "should": "*",
-    "jscover": ">=0.2.0"
+    "supertest": "*",
+    "travis-cov": "*",
+    "blanket": "*"
+  },
+  "scripts": {
+    "test": "make test-all",
+    "blanket": { 
+      "pattern": "//^((?!(node_modules|test)).)*$/",
+      "data-cover-flags": {
+        "debug": false
+      }
+    },
+    "travis-cov": {
+      "threshold": 85
+    }
   },
   "main": "index"
 }
