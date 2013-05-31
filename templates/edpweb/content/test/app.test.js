@@ -1,9 +1,10 @@
 /*!
  * {{project}} - test/app.test.js 
- * Copyright(c) 2012 Taobao.com
+ * Copyright(c) {{copyrightyear}} Alibaba Group Holding Limited.
  * Author: {{name}} <{{email}}>
  */
 
+"use strict";
 
 /**
  * Module dependencies.
